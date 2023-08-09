@@ -1,17 +1,19 @@
 package org.alishahidi.customer;
 
-import java.util.List;
+import java.util.ArrayList;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class Customer {
   private String name;
-  private List<String> products;
+  private ArrayList<String> products = new ArrayList<>();
+
+  public Customer(String name) {
+    this.name = name;
+  }
 
   public void sellSomthing(String product) {
     products.add(product);
